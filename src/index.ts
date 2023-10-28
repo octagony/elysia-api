@@ -1,5 +1,5 @@
-import { Elysia } from "elysia";
+import app from "./server";
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
+app.listen(8080);
 
 console.log(`Server running at ${app.server?.hostname}:${app.server?.port}`);
